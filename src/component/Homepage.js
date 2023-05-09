@@ -1,4 +1,5 @@
-import { Box } from '@mui/material'
+import { Box, Typography } from '@mui/material'
+import Movieitems from './movieitems/Movieitems'
 {/* height 40%  means use 40% of availeble space */}
 
 function Homepage() {
@@ -11,8 +12,15 @@ function Homepage() {
         height={'100%'}
         />
     </Box>
-
-  </Box>)
+    <Box margin={'auto'} width={'100%'} height='40%' padding={4}>
+        <Typography variant='h4' textAlign={'ce'}>latest release</Typography>
+      
+    </Box>
+    <Box margin={'auto'} width={'80%'}  justifyContent={'center'} padding={4} display={'flex'} flexWrap={'wrap'}>
+        {[1,2,3,4].map((items)=><Movieitems key={items}/>)}
+     </Box>
+  </Box>
+  )
 }
 
 export default Homepage
