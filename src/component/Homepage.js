@@ -1,4 +1,4 @@
-import { Box, Typography } from '@mui/material'
+import { Box, Button, Typography } from '@mui/material'
 import Movieitems from './movieitems/Movieitems'
 {/* height 40%  means use 40% of availeble space */}
 
@@ -18,6 +18,10 @@ function Homepage() {
     </Box>
     <Box margin={'auto'} width={'80%'}  justifyContent={'center'} padding={4} display={'flex'} flexWrap={'wrap'}>
         {[1,2,3,4].map((items)=><Movieitems key={items}/>)}
+     </Box>
+     <Box display={'flex'} padding={5} flexWrap={5} margin="auto">
+        <Button variant='outlined' sx={{margin:'auto',color:"#192837"}}>view all movies</Button>
+        jj
      </Box>
   </Box>
   )

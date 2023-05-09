@@ -3,7 +3,7 @@ import React from 'react'
 
 function Movieitems() {
   return (
-    <Card sx={{ maxWidth: 245,height:320,borderRadius:5,
+    <Card sx={{ margin:3,maxWidth: 200,height:320,borderRadius:5,
      ":hover":{boxShadow:"10px 10px 20px #ccc"}}}>
     <CardActionArea>
       <img
