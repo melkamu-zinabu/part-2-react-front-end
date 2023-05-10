@@ -1,10 +1,10 @@
 import React from 'react'
 import Authform from './Authform'
 
-function Auth() {
+function Adminauth() {
   return (
     <Authform/>
   )
 }
 
-export default Auth
+export default Adminauth

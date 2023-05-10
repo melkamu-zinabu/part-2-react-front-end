@@ -1,30 +1,29 @@
 import { Button, Card, CardActionArea, CardActions, CardContent, CardMedia, Typography } from '@mui/material'
 import React from 'react'
-
-function Movieitems() {
+//pass props to make thre card s dynamic
+function Movieitems({id,releasedate,title,posterurl}) {
   return (
-    <Card sx={{ margin:3,maxWidth: 200,height:320,borderRadius:5,
+    <Card sx={{ margin:3,Width: 300,height:320,borderRadius:5,
      ":hover":{boxShadow:"10px 10px 20px #ccc"}}}>
     <CardActionArea>
       <img
         width={'100%'}
         height="50%"
-        src="/static/images/cards/contemplative-reptile.jpg"
-        alt="green iguana"
+        src={posterurl}
+        alt={title}
       />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
-          Lizard
+          {title}
         </Typography>
         <Typography variant="body2" color="text.secondary">
-          Lizards are a widespread group of squamate reptiles, with over 6,000
-          species, ranging across all continents except Antarctica
-        </Typography>
+        {new Date(releasedate).toDateString()}
+       </Typography>
       </CardContent>
     </CardActionArea>
     <CardActions>
       <Button sx={{margin:'auto'}} size="small" color="primary">
-        Share
+        Book
       </Button>
     </CardActions>
   </Card>
